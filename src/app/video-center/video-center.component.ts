@@ -32,7 +32,11 @@ selectedVideo:Video;
     .subscribe(resNewVideo=> {this.videos.push(resNewVideo);
                                 this.selectedVideo=resNewVideo;}); 
   }
-
+  onUpdateVideoEvent(video:any){
+    this._videoService.updateVideo(video)
+    .subscribe(resUpdatedVideo=> video=resUpdatedVideo);
+    this.selectedVideo=null; 
+  }
   newVideo(){
     this.hidenewVideo=false;
   }
