@@ -13,9 +13,15 @@ videos:Video[]=[
   {"_id":"3","title":"Title 3","url":"url 1","description":"desc 1"},
   {"_id":"4","title":"Title 4","url":"url 1","description":"desc 1"}
 ]
+
+selectedVideo:Video;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelectVideo(video:any){
+    this.selectedVideo=video;
+    console.log(this.selectedVideo);
+  }
 }
