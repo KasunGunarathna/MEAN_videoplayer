@@ -2,7 +2,7 @@
     <div class="col-sm-9">
         <div *ngIf="!hidenewVideo">
             <h2>New Video</h2>
-            <form #form="ngForm" (ngSubmit)="oSubmitAddVideo(form.value)" class="well">
+            <form #form="ngForm" (ngSubmit)="onSubmitAddVideo(form.value)" class="well">
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" class="form-control" required name="title" ngModel>
